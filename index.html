@@ -1,0 +1,128 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemp Information</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #27ae60; /* Green color for header */
+        }
+
+        .section {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .section-title {
+            background-color: #e6f7e9; /* Light green background for title */
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .section-content {
+            padding: 10px;
+            display: none; /* Initially hidden */
+            background-color: #f9f9f9;
+        }
+
+        .section-content.show {
+            display: block; /* Shown when clicked */
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .arrow.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VERDANT</h1>
+
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('hempInfo')">
+                What is Hemp?
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="section-content" id="hempInfo">
+                <p>Hemp is a variety of the Cannabis sativa plant, distinguished by its very low tetrahydrocannabinol (THC) content, specifically 0.3% or less on a dry weight basis. This legal distinction is crucial, as it separates hemp from marijuana, which contains higher THC levels. Consequently, hemp is utilized for diverse industrial purposes, including textiles, food, and CBD extraction, without the psychoactive effects associated with marijuana.</p>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('hempUses')">
+                Uses of Hemp
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="section-content" id="hempUses">
+                <ul>
+                    <li><strong>Biofuel:</strong> Hemp can be used to produce biodiesel and ethanol.</li>
+                    <li><strong>Textiles:</strong> Hemp fibers are strong and durable, used for clothing, ropes, and fabrics.</li>
+                    <li><strong>Building Materials:</strong> Hempcrete, a mixture of hemp hurds and lime, is used for insulation and building blocks.</li>
+                    <li><strong>Paper:</strong> Hemp paper is more sustainable than traditional wood pulp paper.</li>
+                    <li><strong>Food:</strong> Hemp seeds are a nutritious source of protein and omega fatty acids. Hemp oil is also used.</li>
+                    <li><strong>Plastics:</strong> Biodegradable hemp-based plastics.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('hempGuidelines')">
+                Guidelines
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="section-content" id="hempGuidelines">
+                <p>Use only biodiesel meeting quality standards.</p>
+                <ul>
+                    <li><strong>1:</strong> Regularly inspect your fuel system.</li>
+                    <li><strong>2:</strong> Confirm your engine is biodiesel-compatible.</li>
+                    <li><strong>3:</strong> Promote sustainable practices in hemp cultivation and processing.</li>
+                    <li><strong>4:</strong> Store biodiesel according to recommendations.</li>
+                    <li><strong>5:</strong> Follow safety guidelines for handling hemp materials and products.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const sectionContent = document.getElementById(sectionId);
+            const arrow = sectionContent.parentElement.querySelector('.arrow');
+            sectionContent.classList.toggle('show');
+            arrow.classList.toggle('rotate');
+
+        }
+    </script>
+</body>
+</html>
